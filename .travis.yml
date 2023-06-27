@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+  - 3.1.1 # Versión de Ruby que estamos utilizando
+
+services:
+  - postgresql # información del motor de bases de datos utilizados
+
+script:
+  - bundle exec rake db:migrate
+  - bundle exec rspec
+  - bundle exec rake assets:precompile
