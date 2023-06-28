@@ -6,7 +6,7 @@ services:
   - postgresql # información del motor de bases de datos utilizados
 
 script:
+  - bundle install
   - bundle exec rake db:migrate
   - bundle exec rspec
-  - bundle exec rake assets:precompile
 
